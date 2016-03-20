@@ -1,0 +1,28 @@
+{
+    "manifest_version": 2,
+    "name":    "Test Extension",
+    "version": "0.0",
+
+    // "background": {
+    //     "persistent": false,
+    //     "scripts": ["background.js"]
+    // },
+    // "content_scripts": [{
+    //     "matches": ["file:///*"],
+    //     "js":      ["content.js"]
+    // }],
+    "content_scripts": [{
+        "matches": ["https://mail.google.com/*"],
+        "js":      ["content.js"]
+    }],
+    "browser_action": {
+        "default_title": "Test Extension",
+        "default_icon": "z-icon.png",
+        "default_popup": "popup.html"
+    },
+
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ]
+}
